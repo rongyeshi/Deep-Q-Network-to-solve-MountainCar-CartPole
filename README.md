@@ -45,7 +45,7 @@ for testing with saved model
 ```python3 DQN_linear_MR.py --env='MountainCar-v0' --render=1 --train=0 --model='save/<model name>'```
 
 Results:
-![Linear_MR](./assets/fig2.png| width=20)
+![Linear_MR](./assets/fig2.png)
 
 
 
@@ -94,6 +94,6 @@ Test and visuallize
 NOTE: if the loss explodes to more than 10e5, stop and re-run it. Otherwise, it still has good chance to reduce and converge
 
 Results:
-![DDQN](./assets/fig4.png){:height="50%" width="50%"}
+![DDQN](./assets/fig4.png){:height="50" width="50"}
 
 
