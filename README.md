@@ -94,6 +94,6 @@ Test and visuallize
 NOTE: if the loss explodes to more than 10e5, stop and re-run it. Otherwise, it still has good chance to reduce and converge
 
 Results:
-![DDQN](./assets/fig4.png){:height="50" width="50"}
+![DDQN](./assets/fig4.png = 30x)
 
 
