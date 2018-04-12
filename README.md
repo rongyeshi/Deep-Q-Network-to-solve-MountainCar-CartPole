@@ -7,13 +7,18 @@ I work with the OpenAI Gym environments for MoutainCar (MC) and CartPole (CP), a
 ## Linear Q-network with Online Learning 
 
 For CartPole training, execute:
+
 ```python3 DQN_linear.py --env='CartPole-v0' --render=0 --train=1```
 
 For MountainCar training, execute:
+
 ```python3 DQN_linear.py --env='MountainCar-v0' --render=0 --train=1```
 
 for testing with save model
+
 ```python3 DQN_linear.py --env='CartPole-v0' --render=1 --train=0 --model='save/<model name>'```
+
+
 ```python3 DQN_linear.py --env='MountainCar-v0' --render=1 --train=0 --model='save/<model name>'```
 
 Results:
@@ -24,15 +29,19 @@ Results:
 ## Linear Q-network with Memory Replay 
 
 For CartPole training, execute:
+
 ```python3 DQN_linear_MR.py --env='CartPole-v0' --render=0 --train=1```
 
 For MountainCar training, execute:
+
 ```python3 DQN_linear_MR.py --env='MountainCar-v0' --render=0 --train=1```
 
 Then some keras model will be saved in the save folder
 
 for testing with saved model
+
 ```python3 DQN_linear_MR.py --env='CartPole-v0' --render=1 --train=0 --model='save/<model name>'```
+
 ```python3 DQN_linear_MR.py --env='MountainCar-v0' --render=1 --train=0 --model='save/<model name>'```
 
 Results:
@@ -43,16 +52,21 @@ Results:
 ## Deep Q-network with Memory Replay
 
 For CartPole training, execute:
+
 ```python3 DQN_Deep_Q.py --env='CartPole-v0' --render=0 --train=1```
 
 For MountainCar training, execute:
+
 ```python3 DQN_Deep_Q.py --env='MountainCar-v0' --render=0 --train=1```
 
 Test and visuallize
+
 ```python3 DQN_Deep_Q.py --env='CartPole-v0' --render=1 --train=0 --model='save/<model name>'```
+
 ```python3 DQN_Deep_Q.py --env='MountainCar-v0' --render=1 --train=0 --model='save/<model name>'```
 
 exp:
+
 ```python3 DQN_Deep_Q.py --env='CartPole-v0' --render=1 --train=0 --model='save/CartPole-v0.h5'```
 
 
@@ -64,13 +78,17 @@ Results:
 ## Dueling Q-network with Memory Replay
 
 For CartPole training, execute:
+
 ```python3 DQN_duelling_Deep_Q.py --env='CartPole-v0' --render=0 --train=1```
 
 For MountainCar training, execute:
+
 ```python3 DQN_duelling_Deep_Q.py --env='MountainCar-v0' --render=0 --train=1```
 
 Test and visuallize
+
 ```python3 DQN_duelling_Deep_Q.py --env='CartPole-v0' --render=1 --train=0 --model='save/<model name>'```
+
 ```python3 DQN_duelling_Deep_Q.py --env='MountainCar-v0' --render=1 --train=0 --model='save/<model name>'```
 
 NOTE: if the loss explodes to more than 10e5, stop and re-run it. Otherwise, it still has good chance to reduce and converge
