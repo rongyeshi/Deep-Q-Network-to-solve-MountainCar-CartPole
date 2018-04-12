@@ -22,6 +22,7 @@ for testing with save model
 ```python3 DQN_linear.py --env='MountainCar-v0' --render=1 --train=0 --model='save/<model name>'```
 
 Results:
+
 ![Linear_OL](./assets/fig1.png)
 
 
@@ -45,6 +46,7 @@ for testing with saved model
 ```python3 DQN_linear_MR.py --env='MountainCar-v0' --render=1 --train=0 --model='save/<model name>'```
 
 Results:
+
 ![Linear_MR](./assets/fig2.png)
 
 
@@ -73,6 +75,7 @@ exp:
 NOTE: if the loss explodes to more than 10e5, stop and re-run it. Otherwise, it still has good chance to reduce and converge
 
 Results:
+
 ![DQN](./assets/fig3.png)
 
 ## Dueling Q-network with Memory Replay
@@ -94,6 +97,7 @@ Test and visuallize
 NOTE: if the loss explodes to more than 10e5, stop and re-run it. Otherwise, it still has good chance to reduce and converge
 
 Results:
+
 ![DDQN](./assets/fig4.png)
 
 
