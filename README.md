@@ -26,7 +26,7 @@ I implement a linear Q-network for both environments. The Linear network is 1 de
 
 The main reason behind this problem is that the complexity of linear model is not able to handle non-linear environments. 
 
-For example, the CartPole environment, the state given by OpenAI gym are positions and velocity of both cart and pole. The relationship between the pushing force and the angle of the pole plus the velocity cannot be represented by a linear function. So, in general, linear Q-network may not work well. But we observed that occasionally the reward (at the start of the training) can reach $>30$ or even $>150$. But it really depends on initial condition.
+For example, the CartPole environment, the state given by OpenAI gym are positions and velocity of both cart and pole. The relationship between the pushing force and the angle of the pole plus the velocity cannot be represented by a linear function. So, in general, linear Q-network may not work well. But we observed that occasionally the reward (at the start of the training) can reach 30+ or even 150+. But it really depends on initial condition.
 
 Also, without experience replay, it is easy to bias to a specific direction when training with a set of samples Figure 1 (a) shows no obvious improvements are made.
 
@@ -57,6 +57,17 @@ for testing with saved model
 ```python3 DQN_linear_MR.py --env='CartPole-v0' --render=1 --train=0 --model='save/<model name>'```
 
 ```python3 DQN_linear_MR.py --env='MountainCar-v0' --render=1 --train=0 --model='save/<model name>'```
+
+
+
+With memory replay, the performance of CartPole have showed improvement in figure 2(a). For MountainCar, the agent still performs poorly. The reason is still due to the complexity of model that are not able to easily capture the dynamics of environment and the sparse reward. I have tried to use different initializer of kernel weights. It does not improve a lot.
+
+The reason why CartPole improves is that the experience replay can break the bias to a specific direction when training with a set of samples. With mitigated bias, even though the linear cannot capture complexity of the environment, the performance indeed improves. But convergence is poor. Between 200,000 and 400,000, we can see clear improvement, but after that, the policy decays.
+
+The MountainCar may still receive some benefit from the replay. I can occasionally see the successful policy being learned within reasonable training time. Again, I use immediate reward by changing the value of gamma to mitigate sparse reward issue. Also, I increase the burn-in size (50,000) and memory size (100,000) and the epsilon starts from 1 to increase randomness. Learning rate is 1 to increase the immediate reward effect. With those settings, I can see some successful policy at some training point. But if I continue the training, I lose the optimal policy.
+
+
+
 
 Results:
 
