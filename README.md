@@ -147,4 +147,6 @@ Results:
 ![DDQN](./assets/fig41.png)
 
 
+[![CP](https://img.youtube.com/vi/ogn-CMdVZhc/0.jpg)](https://youtu.be/ogn-CMdVZhc "Post Trained MountainCar - Click to Watch!")
+
 [![MC](https://img.youtube.com/vi/RTiKTw8q7nk/0.jpg)](https://youtu.be/RTiKTw8q7nk "Post Trained MountainCar - Click to Watch!")
