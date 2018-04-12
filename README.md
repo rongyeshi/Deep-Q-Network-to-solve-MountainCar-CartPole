@@ -75,7 +75,7 @@ Results:
 
 
 
-## Deep Q-network with Memory Replay
+## Deep Q-network
 
 For CartPole training, execute:
 
@@ -116,7 +116,7 @@ Results:
 
 ![DQN](./assets/fig3.png)
 
-## Dueling Q-network with Memory Replay
+## Dueling Q-network
 
 For CartPole training, execute:
 
@@ -134,11 +134,11 @@ Test and visuallize
 
 NOTE: if the loss explodes to more than 10e5, stop and re-run it. Otherwise, it still has good chance to reduce and converge
 
-With dueling architecture, I can find that the convergence rate for Cartpole become larger. In Question 2.3, it takes 200,000 iterations to achieve stable performance. However, it takes approximately 100,000 iterations to achieve stable reward with dueling network. The CartPole takes about 60,000 iterations to start reaching the top score.
+With dueling architecture, I can find that the convergence speed for CartPole increases. In DQN with memory replay, it takes 200,000 iterations to achieve stable performance. However, it takes approximately 100,000 iterations to achieve stable reward with dueling network. The CartPole takes about 60,000 iterations to start reaching the top score.
 
-Due to the sparse reward, the stable performance of MountainCar usually depends on how long it gets to flag for first time. The time it takes is related to learning rate schedule and hyperparameters. After the agent gets to flag, I can find that the dueling deep Q-network is able to stabilize the performance better than deep Q-network. The MountainCar case takes about 350,000 iterations to start constantly increasing and improve to solve the MDP quickly and efficiently.
+Due to the sparse reward, the stable performance of MountainCar usually depends on how long it gets to flag for the first time. The time it takes is related to scheduling learning rate and setting hyperparameters. After the agent gets to flag, I can find that the dueling deep Q-network is able to stabilize the performance better than deep Q-network. The MountainCar case takes about 350,000 iterations to start constantly increasing and later improve to solve the MDP quickly and efficiently.
 
-The experimental results shows that by adding two stream to the network, the learning becomes more stable and finally stablizes at higher award. Other technique including learning scheduling, weight fixing and experience replay are used here to achieve higher score.
+The experimental results shows that by adding two streams to the network, the learning becomes more stable and finally stablizes at higher award. Other technique including learning scheduling, weight freezing and memory replay are used here to achieve higher score.
 
 
 
