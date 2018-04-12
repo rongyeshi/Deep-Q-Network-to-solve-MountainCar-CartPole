@@ -147,4 +147,8 @@ Results:
 ![DDQN](./assets/fig41.png)
 
 
+<video width="320" height="240" controls>
+  <source src="video/CartPole-v0_2_4_stage3.mp4" type="video/mp4">
+  
+</video>
 
