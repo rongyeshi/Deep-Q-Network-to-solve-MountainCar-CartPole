@@ -151,7 +151,7 @@ Results:
 
 Post-Trained CartPole
 
-[![CP](https://img.youtube.com/vi/ogn-CMdVZhc/0.jpg)](https://youtu.be/ogn-CMdVZhc "Post Trained MountainCar - Click to Watch!")
+[![CP](https://img.youtube.com/vi/ogn-CMdVZhc/0.jpg)](https://youtu.be/ogn-CMdVZhc "Post Trained CartPole - Click to Watch!")
 
 Post-Trained MountainCar
 
