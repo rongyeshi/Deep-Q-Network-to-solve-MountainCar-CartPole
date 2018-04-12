@@ -147,8 +147,5 @@ Results:
 ![DDQN](./assets/fig41.png)
 
 
-<video width="320" height="240" controls>
-  <source src="video/CartPole-v0_2_4_stage3.mp4" type="video/mp4">
-  
-</video>
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/RTiKTw8q7nk/0.jpg)](https://youtu.be/RTiKTw8q7nk "Post Trained MountainCar")
 
