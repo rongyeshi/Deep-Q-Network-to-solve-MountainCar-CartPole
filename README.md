@@ -21,6 +21,19 @@ for testing with save model
 
 ```python3 DQN_linear.py --env='MountainCar-v0' --render=1 --train=0 --model='save/<model name>'```
 
+
+I implement a linear Q-network for both environments. The Linear network is 1 dense layer without activation and it has not experience replay. However, the network does not work well under these two environments. 
+
+The main reason behind this problem is that the complexity of linear model is not able to handle non-linear environments. 
+
+For example, the CartPole environment, the state given by OpenAI gym are positions and velocity of both cart and pole. The relationship between the pushing force and the angle of the pole plus the velocity cannot be represented by a linear function. So, in general, linear Q-network may not work well. But we observed that occasionally the reward (at the start of the training) can reach $>30$ or even $>150$. But it really depends on initial condition.
+
+Also, without experience replay, it is easy to bias to a specific direction when training with a set of samples Figure 1 (a) shows no obvious improvements are made.
+
+For MountainCar env, the reward is very sparse and may not be effectively handeled by Q-learning with linear network. One trick that helps with performance improvement under sparse reward is that in each update, the agent learn from immediate reward and mitigate long term Q value with small gamma (0.1). In this way, the reward will pose more effect on the update. With this, even though we did not see the change in total award in figure 1(b), but in video Q2.1-3, the agent appears to learning something and when removing the 200-step limitation, the car can reach the peak. Occasionally, the problem can be solved when initial condition is good.
+
+
+
 Results:
 
 ![Linear_OL](./assets/fig1.png)
