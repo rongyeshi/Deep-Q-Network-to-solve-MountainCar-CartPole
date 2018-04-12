@@ -147,7 +147,7 @@ Results:
 ![DDQN](./assets/fig41.png)
 
 
-## Video for Post-Trained Performance
+## Videos for Post-Trained Performance
 
 Post-Trained CartPole
 
