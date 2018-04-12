@@ -98,6 +98,6 @@ NOTE: if the loss explodes to more than 10e5, stop and re-run it. Otherwise, it 
 
 Results:
 
-![DDQN](./assets/fig4.png)
+![DDQN](./assets/fig41.png)
 
 
