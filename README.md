@@ -95,5 +95,6 @@ NOTE: if the loss explodes to more than 10e5, stop and re-run it. Otherwise, it 
 
 Results:
 ![DDQN](./assets/fig4.png = 30x)
+
 <img src="./assets/fig4.png" width="20" height="20"/>
 
