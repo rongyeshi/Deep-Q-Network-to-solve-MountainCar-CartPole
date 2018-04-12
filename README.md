@@ -147,6 +147,6 @@ Results:
 ![DDQN](./assets/fig41.png)
 
 
-![Watch the video](./video/CartPole-v0_2_4_stage3.mp4)
+!video[Watch the video](./video/CartPole-v0_2_4_stage3.mp4)
 
 
