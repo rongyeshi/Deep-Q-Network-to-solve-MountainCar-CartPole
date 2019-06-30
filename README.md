@@ -37,7 +37,7 @@ For MountainCar env, the reward is very sparse and may not be effectively handel
 Results:
 
 ![Linear_OL](./assets/fig1.png)
-![animation1](./video/MC-2-3.gif)
+![animation0](./video/MC-2-3.gif)
 
 
 
@@ -101,14 +101,14 @@ exp:
 NOTE: if the loss explodes to more than 10e5, stop and re-run it. Otherwise, it still has good chance to reduce and converge
 
 
-In MLP case, the kernel weights initializer and learning rate schedule play important roles on performance. I have tested random normal initializer and Glorot normal initializer. The Glorot normal initializer has better performance since it optimizes for input distribution.
+In multi-layer perceptron (MLP) model, the kernel weights initializer and learning rate schedule play important roles on performance. I have tested random normal initializer and Glorot normal initializer. The Glorot normal initializer has better performance since it optimizes for input distribution.
 
 Learning rate schedule helps us to stay in good weights once I explore to these points. In our setting, I initially set the learning rate 0.001 for mountainCar and 0.00035 for CartPole. If I run into some good policies during testing, then I will shrink the learning rate by halving it until it reaches 0.0001. By doing so, the weights will not change a lot after update. In a non-linear model, this kind of learning rate schedule usually works well.  
 
 
-From the experimental results, the number of hidden units at each layer seems not have to be unnecessarily large. Too large may cause gradient explosion that may make model very unstable. In our setting, I was using 15,20,10 at each hidden layer. With memory replay and target network (double Q learning), the loss is kept under a small amount of value and I can have a better performance. 
+From the experimental results, the number of hidden units at each layer seems not have to be unnecessarily large. Too large may cause gradient explosion that may make model very unstable. In our setting, I was using 15,20,10 at each hidden layer. With memory replay and target network (double Q learning), the loss is kept under a small amount of value and I can achieve a better performance. 
 
-Overall, the Deep Q-network shows good ability to converge and at the end of the evolution in the figures the agent perform reasonably well in each episode. The MountainCar env takes 250,000 iterations to start responding and reaches the score of -140. The CartPole case takes 20,000 iterations to improve and converge to about 185 .
+Overall, the Deep Q-network shows good ability to converge and at the end of the evolution in the figures, the agent perform reasonably well in each episode. The MountainCar env takes 250,000 iterations to start responding and reaches the score of -140. The CartPole case takes 20,000 iterations to improve and converge to about 185 .
 
 
 
