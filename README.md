@@ -1,5 +1,5 @@
 # Deep Q Network to solve MountainCar/CartPole
-The repository explores  an  alternative  to  the  model-based  learning,  i.e.   model-free  learning. In particular, I implement a version of TD learning called Q-learning.
+The repository explores  an  alternative way to the  model-based  learning,  i.e.,   model-free  learning. In particular, I implement a version of TD learning -- Q-learning.
 
 I work with the OpenAI Gym environments for MoutainCar (MC) and CartPole (CP), and train a Q-network from state inputs on a gym environment. This will be a demonstration of some of the techniques (memory replay, freezing weight, dueling Q network, etc) that were found to be important in practice to stabilize training and achievebetter performance
 
