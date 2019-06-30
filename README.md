@@ -1,20 +1,20 @@
 # Deep Q Network to solve MountainCar/CartPole
 The repository explores  an  alternative way to the  model-based  learning,  i.e.,   model-free  learning. In particular, I implement a version of TD learning -- Q-learning.
 
-I work with the OpenAI Gym environments for MoutainCar (MC) and CartPole (CP), and train a Q-network from state inputs on a gym environment. This will be a demonstration of some of the techniques (memory replay, freezing weight, dueling Q network, etc) that were found to be important in practice to stabilize training and achievebetter performance
+I work with the OpenAI Gym environments for MoutainCar (MC) and CartPole (CP). I train a Q-network for those gym environments. This will be a demonstration of some of the techniques (memory replay, freezing weight, dueling Q network, etc.) that were found to be important and effective in practice to stabilize training and achievebetter performance
 
 
 ## Linear Q-network with Online Learning 
 
-For CartPole training, execute:
+For CartPole training:
 
 ```python3 DQN_linear.py --env='CartPole-v0' --render=0 --train=1```
 
-For MountainCar training, execute:
+For MountainCar training:
 
 ```python3 DQN_linear.py --env='MountainCar-v0' --render=0 --train=1```
 
-for testing with save model
+for testing with save model:
 
 ```python3 DQN_linear.py --env='CartPole-v0' --render=1 --train=0 --model='save/<model name>'```
 
@@ -22,7 +22,7 @@ for testing with save model
 ```python3 DQN_linear.py --env='MountainCar-v0' --render=1 --train=0 --model='save/<model name>'```
 
 
-I implement a linear Q-network for both environments. The Linear network is 1 dense layer without activation and it has not experience replay. However, the network does not work well under these two environments. 
+I implement a linear Q-network for both environments. The Linear network is 1 ```dense``` layer without activation and it has not experience replay. However, the network does not work well under these two environments. 
 
 The main reason behind this problem is that the complexity of linear model is not able to handle non-linear environments. 
 
