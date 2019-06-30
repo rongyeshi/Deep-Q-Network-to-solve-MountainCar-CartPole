@@ -30,13 +30,15 @@ For example, the CartPole environment, the state given by OpenAI gym are positio
 
 Also, without experience replay, it is easy to bias to a specific direction when training with a set of samples. In Figure 1 (a), no obvious improvements are made.
 
-For MountainCar env, the reward is very sparse and may not be effectively handeled by Q-learning with linear network. One trick that helps with performance improvement under sparse reward is that in each update, the agent learn from immediate reward and mitigate long term Q value with small gamma (0.1). In this way, the reward will pose more effect on the update. With this, even though I did not see the change in total award in figure 1(b), but in video Q2.1-3, the agent appears to learning something and when removing the 200-step limitation, the car can reach the peak. Occasionally, the problem can be solved when initial condition is good.
+For MountainCar env, the reward is very sparse and may not be effectively handeled by Q-learning with linear network. One trick that helps with performance improvement under sparse reward is that in each update, the agent learn from immediate reward and mitigate long term Q value with small gamma (0.1). In this way, the reward will pose more effect on the update. With this, even though I did not see the change in total award in figure 1(b), but in video bellow, the agent appears to have learned something and when removing the 200-step limitation, the car can reach the peak. Occasionally, the problem can be solved when initial condition is good.
 
 
 
 Results:
 
 ![Linear_OL](./assets/fig1.png)
+![animation1](./video/MC-2-3.gif)
+
 
 
 
@@ -72,8 +74,6 @@ The MountainCar may still receive some benefit from the replay. I can occasional
 Results:
 
 ![Linear_MR](./assets/fig2.png)
-
-![animation1](./video/MC-2-3.gif)
 
 
 
